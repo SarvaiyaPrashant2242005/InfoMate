@@ -167,6 +167,7 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
+    sources: Optional[List[dict]] = None
 
 
 # ---------------------
@@ -312,6 +313,10 @@ def try_compute_package_answer(query: str, contexts: List[str]) -> str | None:
 # ---------------------
 # Endpoints
 # ---------------------
+@app.get("/")
+def root():
+    return {"message": "InfoMate backend is running 🚀"}
+
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(body: ChatRequest):
     query = body.query.strip()
