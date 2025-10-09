@@ -8,6 +8,8 @@ An AI-powered assistant for the ICT Department that answers questions grounded i
 - **Caching** of extracted structured data to reduce repeated LLM calls
 - **Modern UI** with Tailwind, sidebar navigation, and optional speech input/output (browser-dependent)
 
+## Live Link : https://infomatict.vercel.app/
+
 ## Project Structure
 ```
 InfoMate/
